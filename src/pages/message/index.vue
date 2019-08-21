@@ -1,4 +1,10 @@
 <template>
+  <div>
+    <div class="section">
+      <!-- https://www.runoob.com/try/demo_source/movie.mp4 -->
+      <video id="myVideo" src="cloud://bertlearning-62870c.6265-bertlearning-62870c/music/沈云李慧.mp4"></video>
+    </div>
+
     <div class="message">
         <view class="box">
             <p class="place"></p>
@@ -33,15 +39,16 @@
                 <button class="right" @tap="cancel">取消</button>
             </div>
         </div>
-        <div class="video-dialog" @tap="toVideo">
-            <image src="../../static/images/video1.png"/>
-        </div>
+        <!-- 暂定抽奖功能，todo 样式-->
+        <!-- <div class="video-dialog" @tap="toVideo">
+            <span>抽奖</span>
+        </div> -->
         <div class="form-dialog" @tap="lookList">
             <image src="../../static/images/form.png"/>
         </div>
-        <div class="video" v-show="isVideo">
+        <!-- <div class="video" v-show="isVideo">
             <h-video @closeVideo="closeVideo"></h-video>
-        </div>
+        </div> -->
         <div class="form" v-show="isForm">
             <h-form @closeForm="closeForm" @getFromlist="getFromlist"></h-form>
         </div>
@@ -49,6 +56,7 @@
             <h-formlist @closeFormlist="closeFormlist" :formList="formList"></h-formlist>
         </div>
     </div>
+  </div>
 </template>
 
 <script>
@@ -70,7 +78,7 @@ export default {
       desc: '',
       messageList: [],
       page: 0,
-      loadTxt: '加载中',
+      loadTxt: '加载中...',
       isMore: true,
       openId: '',
       userInfo: '',
@@ -98,13 +106,16 @@ export default {
       const that = this
       if (e.target.errMsg === 'getUserInfo:ok') {
         // that.isOpen = true
-        wx.getUserInfo({
-          success: function (res) {
-            that.userInfo = res.userInfo
-            that.isOpen = true
-            that.getOpenId()
-          }
-        })
+        // wx.getUserInfo({
+        //   success: function (res) {
+        //     that.userInfo = res.userInfo
+        //     that.isOpen = true
+        //     that.getOpenId()
+        //   }
+        // })
+        that.userInfo = e.target.userInfo
+        that.isOpen = true
+        that.getOpenId()
       }
     },
 
@@ -185,6 +196,7 @@ export default {
             that.loadTxt = '没有更多了'
           } else {
             that.messageList = that.messageList.concat(res.data)
+            that.messageList.reverse()
             that.page++
             if (res.data.length < 10) {
               that.isMore = false
@@ -279,9 +291,25 @@ export default {
 </script>
 
 <style scoped lang="stylus">
-.message
+.section
+  width 750rpx
+  position fixed
+  top 0
+  left 50%
+  margin-left -375rpx
+  z-index 99
+  #myVideo
+    height 422rpx
     width 100%
-    overflow-y auto
+    margin-bottom 20rpx
+    background-color #fff
+.message
+    // width 100%
+    position relative
+    overflow-y hidden
+    height 100%
+    width 100%
+    margin-top 450rpx
     .box
         background #F9E0D9
         min-height 100%
@@ -392,19 +420,23 @@ export default {
     .video-dialog
         position fixed
         right 10rpx
-        top 200rpx
+        bottom 597rpx
         width 100rpx
         height 100rpx
         box-shadow 0 0 10rpx rgba(0, 0, 0, 0.1)
         background #fff
         border-radius 16rpx
-        image
+        text-align center
+        background-color #ccc
+        span
             width 100%
-            height 100%
+            height 100rpx
+            line-height 100rpx
+            font-size 40rpx
     .form-dialog
         position fixed
         right 10rpx
-        top 320rpx
+        bottom 463rpx
         width 100rpx
         height 100rpx
         box-shadow 0 0 10rpx rgba(0, 0, 0, 0.1)

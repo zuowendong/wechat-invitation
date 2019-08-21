@@ -1,62 +1,57 @@
 <template>
     <div class="map">
-        <image mode="aspectFit" class="head-img" src="../../static/images/t1.png"/>
-        <map class="content" id="map" :longitude="longitude" :latitude="latitude" show-location="true" :markers="markers" :scale="scale" @tap="toNav"></map>
+        <img mode="aspectFit" class="head-img" src="cloud://bertlearning-62870c.6265-bertlearning-62870c/images/t1.png"/>
+        <map class="content" id="map" longitude="119.317711" latitude="33.24654" :markers="markers" scale="18" @tap="toNav">
+        </map>
         <div class="call">
             <div class="left" @tap="linkHe">
-                <image src="../../static/images/he.png"/>
+                <img src="cloud://bertlearning-62870c.6265-bertlearning-62870c/images/he.png"/>
                 <span>呼叫新郎</span>
             </div>
             <div class="right" @tap="linkShe">
-                <image src="../../static/images/she.png"/>
+                <img src="cloud://bertlearning-62870c.6265-bertlearning-62870c/images/she.png"/>
                 <span>呼叫新娘</span>
             </div>
         </div>
-        <image class="footer" src="../../static/images/grren-flower-line.png"/>
+        <img class="footer" src="cloud://bertlearning-62870c.6265-bertlearning-62870c/images/grren-flower-line.png"/>
+        <p>苍狗又白云，身旁有了你，匆匆人生又有何惧</p>
     </div>
 </template>
 
 <script>
-// import QQMap from 'common/js/qqmap-wx-jssdk.js'
 export default {
   name: 'Map',
   data () {
     return {
-      // qqSdk: '',
-      latitude: 36.724026,
-      longitude: 104.848902,
-      scale: 12,
       markers: [{
         iconPath: '../../static/images/nav.png',
         id: 0,
-        latitude: 36.724026,
-        longitude: 104.848902,
+        longitude: 119.317711,
+        latitude: 33.24654,
         width: 50,
-        height: 50,
-        scale: 12
+        height: 50
       }]
     }
   },
 
   methods: {
     toNav () {
-      let that = this
       wx.openLocation({
-        latitude: that.latitude,
-        longitude: that.longitude,
-        scale: that.scale
+        latitude: 33.24654,
+        longitude: 119.317711,
+        scale: 18
       })
     },
 
     linkHe () {
       wx.makePhoneCall({
-        phoneNumber: '18358274764'
+        phoneNumber: '15150881616'
       })
     },
 
     linkShe () {
       wx.makePhoneCall({
-        phoneNumber: '17855847639'
+        phoneNumber: '13218057256'
       })
     }
   }
@@ -101,4 +96,17 @@ export default {
       height 80rpx
       width 716rpx
       margin-left 17rpx
+    p
+      height: 60rpx;
+      line-height: 60rpx;
+      background: rgba(255,255,255,0.5);
+      position: fixed;
+      bottom: -14rpx;
+      left: 0;
+      font-size: 28rpx;
+      color: #444;
+      text-align: center;
+      width: 100%;
+      color #dddddd
+
 </style>

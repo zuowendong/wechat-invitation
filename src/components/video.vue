@@ -1,6 +1,6 @@
 <template>
     <div class="section">
-        <video id="myVideo" src="https://vodkgeyttp9.vod.126.net/vodkgeyttp8/Yzye7Vfe_735069_hd.mp4?wsSecret=19b7c3db3f411c9f637a65c4af411d8c&wsTime=1552232105&ext=jC%2Fk7q%2BCq%2FO1S1X%2FP9welz2kSrj23N3v%2FzvTEuux1PcL%2FH1Teg3fxwFiQVk9SUHVU2wOyV5pyBD1LGHskMbP2KuQet%2FGH3mQuSVE1BYrhbKsNe8p2LXoD%2FxxW7qJnnxwwgHPtxcffbihVRKrJ1y9spoYAOS775yXnQ2cR%2BoaDhf2HnyUCX91fZFkMZ%2F%2B127fTCKJiW6sfw1lAQlDPhIQwGoaJ%2FyKdfkKlBAxrr%2BEv2mQjcJcneZSkTLdHm5Sy7h%2F6XnPGZGsDSIEDfa0q4wa3OgqljDZdvQrWVPYyQnBgZGuPekEVZwiYg3Wek63DDuTE4z%2F3FPs09wCuHu%2Fw9mG7P83PaOQkxD7qHS4L%2BdwkHJ3hg1vWCSCs0WFXQOHxZg5KAsucEAFWoxAwvVxfcBtErgB73JdoHmRzQ1%2BUpHND5GJEQ2d0msYfXvAWeuJnWMCsl0bf%2B%2FvDk2YQE%2FWm2TEodQTuXCWnrV4wlqRJsX6r5hpcPv52l%2Bjy%2B7yMd1nG3JLTacwREBvcLYOuA3HKAddLMrkNXze6V%2BggOLtZwAtsyU%3D" :danmu-list="danmuList" enable-danmu danmu-btn controls poster="http://img.jammyfm.com/wordpress/wp-content/uploads/2017/01/201701221330291592-720x480.jpg?x-oss-process=image/resize,w_720,h_480,m_fill,limit_0"></video>
+        <video id="myVideo" src="https://www.runoob.com/try/demo_source/movie.mp4"></video>
         <div class="btn-area">
             <input @blur="bindInputBlur" placeholder="请输入临时弹幕，真实弹幕来自留言" placeholder-style="color:#bbb"/>
             <button @tap="bindSendDanmu">点击生成临时弹幕</button>
@@ -61,7 +61,7 @@ export default {
             arr.push({
               text: item.desc,
               color: that.getRandomColor(),
-              time: 1 + (index * 2)
+              time: 5 + (index * 2)
             })
           })
           that.danmuList = arr

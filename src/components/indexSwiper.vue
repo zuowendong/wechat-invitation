@@ -4,25 +4,20 @@
             :autoplay="true"
             :circular="true"
             current=0
-            :indicator-dots="true"
             :vertical="true"
         >
-            <block v-for="(item, index) in list" :key="index">
-                <swiper-item class="item">
-                    <image mode="aspectFill" lazy-load="true" :src="item" class="slide-image"/>
-                </swiper-item>
-            </block>
+            <swiper-item class="item">
+                <!-- 首页照片 -->
+                <img mode="aspectFill" lazy-load="true" src="cloud://bertlearning-62870c.6265-bertlearning-62870c-1258833606/photo/38.png" class="slide-image"/>
+            </swiper-item>
         </swiper>
     </div>
 </template>
-
 <script>
 export default {
-  name: 'GoodSwiper',
-  props: ['list']
+  name: 'IndexSwiper'
 }
 </script>
-
 <style lang="stylus" scoped>
 .box
     position relative
@@ -33,8 +28,10 @@ export default {
         .item
             width 100%
             height 100%
-            image
-                width 100%
-                height 100%
-                display block
+            display flex
+            justify-content center
+            align-items: center
+            .slide-image
+                min-height 100%
+                min-width 100%
 </style>

@@ -1,12 +1,11 @@
 import Vue from 'vue'
 import App from './App'
-import { CLOUD_CONFIG } from '../src/service/config/index'
 
 Vue.config.productionTip = false
 App.mpType = 'app'
 
 wx.cloud.init({
-  env: CLOUD_CONFIG.DBID
+  env: 'bertlearning-62870c'
 })
 
 const app = new Vue(App)

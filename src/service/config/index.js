@@ -1,4 +1,4 @@
 export const CLOUD_CONFIG = {
-  DBID: 'forguo-0979a1',
-  DBNAME: 'weddingInvite'
+  DBID: 'bertlearning-62870c',
+  DBNAME: 'bertlearning'
 }

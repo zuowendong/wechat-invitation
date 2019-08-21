@@ -36,12 +36,8 @@ export default {
     sendGreet (e) {
       const that = this
       if (e.target.errMsg === 'getUserInfo:ok') {
-        wx.getUserInfo({
-          success: function (res) {
-            that.userInfo = res.userInfo
-            that.getOpenId()
-          }
-        })
+        that.userInfo = e.target.userInfo
+        that.getOpenId()
       }
     },
     addUser () {
@@ -53,7 +49,6 @@ export default {
           user: that.userInfo
         }
       }).then(res => {
-        // that.getUserList()
         let user = {
           user: that.userInfo
         }
@@ -68,7 +63,7 @@ export default {
         name: 'login',
         data: {}
       }).then(res => {
-        that.openId = res.result.openid
+        that.openId = res.result.event.userInfo.openId
         that.getIsExist()
       })
     },
@@ -83,7 +78,7 @@ export default {
         if (res.data.length === 0) {
           that.addUser()
         } else {
-          tools.showToast('您已经送过祝福了~')
+          tools.showToast('您的祝福已经收到啦~')
         }
       })
     },
@@ -99,12 +94,13 @@ export default {
       })
     }
   },
+
   onShareAppMessage (res) {
     // console.log(res)
     return {
-      title: '送上您的祝福',
-      path: '/pages/greet/main',
-      imageUrl: '../../static/logo.jpg'
+      title: '嘿！有场仪式需要您的见证~',
+      path: '/pages/index/main',
+      imageUrl: 'https://img-blog.csdnimg.cn/20190804154125873.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JlcnRadW8=,size_16,color_FFFFFF,t_70'
     }
   }
 }

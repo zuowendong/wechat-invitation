@@ -1,25 +1,26 @@
 <template>
     <div class="index">
         <div class="bg-swiper">
-            <index-swiper :list="list"></index-swiper>
+            <index-swiper></index-swiper>
         </div>
-        <image class="inv" src="../../static/images/inv.png"/>
+        <img class="inv" src="cloud://bertlearning-62870c.6265-bertlearning-62870c/images/inv.png"/>
+        <!-- 背景音乐 -->
         <div class="bg_music" v-if="isPlay" @tap="audioPlay">
-            <image src="../../static/images/music_icon.png" class="musicImg music_icon"/>
-            <image src="../../static/images/music_play.png" class="music_play pauseImg"/>
+            <img src="cloud://bertlearning-62870c.6265-bertlearning-62870c/images/music_icon.png" class="musicImg music_icon"/>
+            <img src="cloud://bertlearning-62870c.6265-bertlearning-62870c/images/music_play.png" class="music_play pauseImg"/>
         </div>
         <div class="bg_music" v-else @tap="audioPlay">
-            <image src="../../static/images/music_icon.png" class="musicImg"/>
-            <image src="../../static/images/music_play.png" class="music_play playImg"/>
+            <img src="cloud://bertlearning-62870c.6265-bertlearning-62870c/images/music_icon.png" class="musicImg"/>
+            <img src="cloud://bertlearning-62870c.6265-bertlearning-62870c/images/music_play.png" class="music_play playImg"/>
         </div>
         <div class="info" :animation="animationData">
             <div class="content">
-                <h1>Mr.姬 & Miss.徐</h1>
-                <p>谨定于 2019年2月2日 （星期六）中午12:00</p>
-                <p>农历 腊月二十八 中午十二点整 举办婚礼</p>
-                <p>席设：江苏省常州市香格里拉大酒店</p>
-                <p>地址：江苏省常州市康庄大道777号</p>
-                <image src="../../static/images/we.png" class="img_footer"/>
+                <h1>沈运 <span>❤</span> 李慧</h1>
+                <p>谨定于 2019年10月04日（星期五）晚上18:08</p>
+                <p>农历 九月初六 晚上六点零八分 举办婚礼</p>
+                <p>席设：宝应县宝胜苑宴会大厅</p>
+                <p>地址：江苏省扬州市宝应县苏中路1号</p>
+                <img src="cloud://bertlearning-62870c.6265-bertlearning-62870c/images/we.png" class="img_footer"/>
             </div>
         </div>
     </div>
@@ -27,8 +28,7 @@
 
 <script>
 import IndexSwiper from 'components/indexSwiper'
-import tools from 'common/js/h_tools'
-import cloud from '@/service/cloud'
+import tools from '../../common/js/h_tools'
 const audioCtx = wx.createInnerAudioContext()
 export default {
   name: 'Index',
@@ -37,18 +37,17 @@ export default {
   },
   data () {
     return {
-      isPlay: true,
-      list: []
+      isPlay: true
     }
-  },
-  onLoad () {
-    const that = this
-    that.getList()
   },
   onShow () {
     const that = this
     that.isPlay = true
-    // that.getMusicUrl()
+    audioCtx.src = 'cloud://bertlearning-62870c.6265-bertlearning-62870c/music/yudao.mp3'
+    audioCtx.autoplay = true
+    // wx.showShareMenu({
+    //   withShareTicket: true
+    // })
   },
 
   methods: {
@@ -63,28 +62,14 @@ export default {
         that.isPlay = true
         tools.showToast('背景音乐已开启~')
       }
-    },
-
-    getList () {
-      const that = this
-      wx.showNavigationBarLoading()
-      cloud.get('weddingInvite').then((res) => {
-        if (res.errMsg === 'collection.get:ok') {
-          that.list = res.data[0].banner
-          let musicUrl = res.data[0].music
-          audioCtx.src = musicUrl
-          audioCtx.loop = true
-          audioCtx.autoplay = true
-          audioCtx.play()
-          wx.hideNavigationBarLoading()
-        }
-      })
     }
   },
 
   onShareAppMessage: function (res) {
     return {
-      path: '/pages/index/main'
+      title: '嘿，有场仪式需要您的见证',
+      path: '/pages/index/main',
+      imageUrl: 'https://img-blog.csdnimg.cn/20190804154125873.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JlcnRadW8=,size_16,color_FFFFFF,t_70'
     }
   }
 }
@@ -133,7 +118,7 @@ export default {
     position fixed
     right 0
     top 20rpx
-    width 85rpx
+    width 100rpx
     z-index 99
     display flex
     justify-content flex-start
@@ -175,6 +160,8 @@ export default {
         font-size 50rpx
         height 100rpx
         line-height 100rpx
+        span
+          color red
       p
         font-size 24rpx
         height 60rpx
@@ -186,4 +173,6 @@ export default {
         z-index 99
         height 14rpx
         width 520rpx
+  #myAudio
+    display none
 </style>

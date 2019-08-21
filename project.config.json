@@ -10,9 +10,11 @@
 	},
 	"miniprogramRoot": "dist/wx/",
 	"compileType": "miniprogram",
-	"appid": "wx29ddc6783f8e57e6",
+	"appid": "wx109b009a0329be36",
 	"projectname": "%E5%A9%9A%E7%A4%BC%E9%82%80%E8%AF%B7%E5%87%BD",
 	"cloudfunctionRoot": "static/functions/",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,

@@ -6,28 +6,70 @@
             current=0
             :indicator-dots="true"
         >
-            <block v-for="(item, index) in list" :key="index">
-                <swiper-item class="item">
-                    <image mode="aspectFill" lazy-load="true" :src="item" class="slide-image"/>
-                </swiper-item>
-            </block>
+        <!-- 照片页列表 -->
+            <swiper-item class="item">
+                <img mode="aspectFill" lazy-load="true" src="cloud://bertlearning-62870c.6265-bertlearning-62870c/photo/1.png" class="slide-image"/>
+            </swiper-item>
+
+            <swiper-item class="item">
+                <img mode="aspectFill" lazy-load="true" src="cloud://bertlearning-62870c.6265-bertlearning-62870c/photo/7.png" class="slide-image"/>
+            </swiper-item>
+
+            <swiper-item class="item">
+                <img mode="aspectFill" lazy-load="true" src="cloud://bertlearning-62870c.6265-bertlearning-62870c/photo/9.png" class="slide-image"/>
+            </swiper-item>
+
+            <swiper-item class="item">
+                <img mode="aspectFill" lazy-load="true" src="cloud://bertlearning-62870c.6265-bertlearning-62870c/photo/10.png" class="slide-image"/>
+            </swiper-item>
+
+            <swiper-item class="item">
+                <img mode="aspectFill" lazy-load="true" src="cloud://bertlearning-62870c.6265-bertlearning-62870c/photo/11.png" class="slide-image"/>
+            </swiper-item>
+
+            <swiper-item class="item">
+                <img mode="aspectFill" lazy-load="true" src="cloud://bertlearning-62870c.6265-bertlearning-62870c/photo/14.png" class="slide-image"/>
+            </swiper-item>
+
+            <swiper-item class="item">
+                <img mode="aspectFill" lazy-load="true" src="cloud://bertlearning-62870c.6265-bertlearning-62870c/photo/17.png" class="slide-image"/>
+            </swiper-item>
+
+            <swiper-item class="item">
+                <img mode="aspectFill" lazy-load="true" src="cloud://bertlearning-62870c.6265-bertlearning-62870c/photo/21.png" class="slide-image"/>
+            </swiper-item>
+
+            <swiper-item class="item">
+                <img mode="aspectFill" lazy-load="true" src="cloud://bertlearning-62870c.6265-bertlearning-62870c/photo/23.png" class="slide-image"/>
+            </swiper-item>
+
+            <swiper-item class="item">
+                <img mode="aspectFill" lazy-load="true" src="cloud://bertlearning-62870c.6265-bertlearning-62870c/photo/25.png" class="slide-image"/>
+            </swiper-item>
+
+            <swiper-item class="item">
+                <img mode="aspectFill" lazy-load="true" src="cloud://bertlearning-62870c.6265-bertlearning-62870c/photo/29.png" class="slide-image"/>
+            </swiper-item>
+
+            <swiper-item class="item">
+                <img mode="aspectFill" lazy-load="true" src="cloud://bertlearning-62870c.6265-bertlearning-62870c/photo/31.png" class="slide-image"/>
+            </swiper-item>
+
+            <swiper-item class="item">
+                <img mode="aspectFill" lazy-load="true" src="cloud://bertlearning-62870c.6265-bertlearning-62870c/photo/36.png" class="slide-image"/>
+            </swiper-item>
+
+            <swiper-item class="item">
+                <img mode="aspectFill" lazy-load="true" src="cloud://bertlearning-62870c.6265-bertlearning-62870c/photo/4.png" class="slide-image"/>
+            </swiper-item>
         </swiper>
-        <image v-if="isGif" class="img" src="../../static/images/save_the_date_pu.gif"/>
     </div>
 </template>
 
+
 <script>
 export default {
-  name: 'GoodSwiper',
-  props: ['list', 'isGif'],
-  watch: {
-    isGif (newValue, oldValue) {
-      const that = this
-      if (newValue) {
-        that.isGif = newValue
-      }
-    }
-  }
+  name: 'GoodSwiper'
 }
 </script>
 
@@ -41,13 +83,10 @@ export default {
         .item
             width 100%
             height 100%
-            image
-                width 100%
-                height 100%
-                display block
-    .img
-        position absolute
-        bottom 50rpx
-        left 50rpx
-        z-index 99
+            display flex
+            justify-content center
+            align-items: center
+            .slide-image
+                min-height 100%
+                min-width 100%
 </style>

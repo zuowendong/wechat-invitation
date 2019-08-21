@@ -10,7 +10,7 @@
         </p>
         <input type="number" placeholder="请填写有效的手机号码" v-model="phone" @input="checkPhone" maxlength="11">
         <p class="title">
-            几人出席
+            出席人数
         </p>
         <radio-group @change="radioChange" class="group">
             <label class="radio" v-for="(item, index) in list" :key="index">
@@ -19,9 +19,9 @@
             </label>
         </radio-group>
         <p class="title">
-            备注
+            赴宴人员
         </p>
-        <textarea focus="true" maxlength="80" class="desc" placeholder="请填写您的备注需求" name="textarea" placeholder-style="color:#ccc;" v-model="desc"/>
+        <textarea focus="true" maxlength="80" class="desc" placeholder="请填写您会携带的眷属" name="textarea" placeholder-style="color:#ccc;" v-model="desc"/>
         <div class="btn">
             <button class="left" @tap="submit">确认提交</button>
             <button class="right" @tap="cancel">取消</button>
@@ -36,13 +36,9 @@ export default {
   data () {
     return {
       list: [{
-        name: '自己出席', value: '自己出席', checked: true
+        name: '个人出席', value: '个人出席', checked: true
       }, {
-        name: '两人出席', value: '两人出席', checked: false
-      }, {
-        name: '三人出席', value: '三人出席', checked: false
-      }, {
-        name: '三人以上', value: '三人以上', checked: false
+        name: '家庭出席', value: '家庭出席', checked: false
       }],
       desc: '',
       name: '',
@@ -71,10 +67,10 @@ export default {
         if (that.phoneFlag) {
           that.addPresent()
         } else {
-          tools.showToast('请正确输入您的手机号码')
+          tools.showToast('Please enter your mobile phone number')
         }
       } else {
-        tools.showToast('请填写您的姓名')
+        tools.showToast('Please input your name')
       }
     },
 
@@ -105,7 +101,7 @@ export default {
       }).then(res => {
         that.name = ''
         that.phone = ''
-        that.count = '自己出席'
+        that.count = '个人出席'
         that.desc = ''
         that.$emit('closeForm')
       })
