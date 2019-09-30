@@ -1,10 +1,12 @@
 <template>
     <div class="greet">
         <image class="head" src="https://666f-forguo-0979a1-1251886253.tcb.qcloud.la/wxapp/wedding/static/imgs/heart-animation.gif"/>
-        <scroll-view scroll-y
-            class="box">
+        <scroll-view scroll-y class="box">
+            <!-- 发送祝福用户列表 -->
             <div class="item" v-for="(item, index) in userList" :key="index">
+                <!-- 用户头像 -->
                 <image :src="item.user.avatarUrl"/>
+                <!-- 用户名 -->
                 <p>{{item.user.nickName}}</p>
             </div>
         </scroll-view>
@@ -33,6 +35,7 @@ export default {
     that.getUserList()
   },
   methods: {
+    // 发送祝福按钮事件
     sendGreet (e) {
       const that = this
       if (e.target.errMsg === 'getUserInfo:ok') {
@@ -40,6 +43,8 @@ export default {
         that.getOpenId()
       }
     },
+
+    // 添加用户信息
     addUser () {
       const that = this
       const db = wx.cloud.database()
@@ -57,6 +62,7 @@ export default {
       })
     },
 
+    // 获取祝福用户的openID
     getOpenId () {
       const that = this
       wx.cloud.callFunction({
@@ -68,6 +74,7 @@ export default {
       })
     },
 
+    // 已发送过祝福的用户避免二次记录祝福信息
     getIsExist () {
       const that = this
       const db = wx.cloud.database()
@@ -83,6 +90,7 @@ export default {
       })
     },
 
+    // 获取云数据库中存储的用户列表
     getUserList () {
       const that = this
       wx.showNavigationBarLoading()
@@ -95,12 +103,12 @@ export default {
     }
   },
 
+  // 分享按钮事件
   onShareAppMessage (res) {
-    // console.log(res)
     return {
-      title: '嘿！有场仪式需要您的见证~',
+      title: '自定义分享内容',
       path: '/pages/index/main',
-      imageUrl: 'https://img-blog.csdnimg.cn/20190804154125873.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JlcnRadW8=,size_16,color_FFFFFF,t_70'
+      imageUrl: 'https://img-blog.csdnimg.cn/20190918091410914.gif'
     }
   }
 }

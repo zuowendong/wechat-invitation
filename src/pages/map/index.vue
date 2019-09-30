@@ -1,7 +1,8 @@
 <template>
     <div class="map">
         <img mode="aspectFit" class="head-img" src="cloud://bertlearning-62870c.6265-bertlearning-62870c/images/t1.png"/>
-        <map class="content" id="map" longitude="119.317711" latitude="33.24654" :markers="markers" scale="18" @tap="toNav">
+        <!-- 地图中心点位置 -->
+        <map class="content" id="map" longitude="116.40" latitude="39.30" :markers="markers" scale="18" @tap="toNav">
         </map>
         <div class="call">
             <div class="left" @tap="linkHe">
@@ -14,7 +15,6 @@
             </div>
         </div>
         <img class="footer" src="cloud://bertlearning-62870c.6265-bertlearning-62870c/images/grren-flower-line.png"/>
-        <p>苍狗又白云，身旁有了你，匆匆人生又有何惧</p>
     </div>
 </template>
 
@@ -26,8 +26,8 @@ export default {
       markers: [{
         iconPath: '../../static/images/nav.png',
         id: 0,
-        longitude: 119.317711,
-        latitude: 33.24654,
+        longitude: 116.40,
+        latitude: 39.30,
         width: 50,
         height: 50
       }]
@@ -35,6 +35,7 @@ export default {
   },
 
   methods: {
+    // 地图中心位置经纬度及缩放设置
     toNav () {
       wx.openLocation({
         latitude: 33.24654,
@@ -45,13 +46,13 @@ export default {
 
     linkHe () {
       wx.makePhoneCall({
-        phoneNumber: '15150881616'
+        phoneNumber: '12345678910'
       })
     },
 
     linkShe () {
       wx.makePhoneCall({
-        phoneNumber: '13218057256'
+        phoneNumber: '12345678910'
       })
     }
   }

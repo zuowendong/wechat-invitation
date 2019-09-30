@@ -1,4 +1,5 @@
 <template>
+    <!-- 图片轮播组件 -->
     <div class="photo">
         <h-swiper></h-swiper>
     </div>

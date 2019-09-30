@@ -1,10 +1,10 @@
 <template>
   <div>
+    <!-- 视频 -->
     <div class="section">
-      <!-- https://www.runoob.com/try/demo_source/movie.mp4 -->
-      <video id="myVideo" src="cloud://bertlearning-62870c.6265-bertlearning-62870c/music/沈云李慧.mp4"></video>
+      <video id="myVideo" src="https://www.runoob.com/try/demo_source/movie.mp4"></video>
     </div>
-
+    <!-- 留言列表 -->
     <div class="message">
         <view class="box">
             <p class="place"></p>
@@ -39,16 +39,9 @@
                 <button class="right" @tap="cancel">取消</button>
             </div>
         </div>
-        <!-- 暂定抽奖功能，todo 样式-->
-        <!-- <div class="video-dialog" @tap="toVideo">
-            <span>抽奖</span>
-        </div> -->
         <div class="form-dialog" @tap="lookList">
             <image src="../../static/images/form.png"/>
         </div>
-        <!-- <div class="video" v-show="isVideo">
-            <h-video @closeVideo="closeVideo"></h-video>
-        </div> -->
         <div class="form" v-show="isForm">
             <h-form @closeForm="closeForm" @getFromlist="getFromlist"></h-form>
         </div>
@@ -105,14 +98,6 @@ export default {
     toMessage (e) {
       const that = this
       if (e.target.errMsg === 'getUserInfo:ok') {
-        // that.isOpen = true
-        // wx.getUserInfo({
-        //   success: function (res) {
-        //     that.userInfo = res.userInfo
-        //     that.isOpen = true
-        //     that.getOpenId()
-        //   }
-        // })
         that.userInfo = e.target.userInfo
         that.isOpen = true
         that.getOpenId()

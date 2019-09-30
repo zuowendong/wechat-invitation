@@ -1,5 +1,6 @@
 <template>
     <div class="index">
+      <!-- 主页面图片 -->
         <div class="bg-swiper">
             <index-swiper></index-swiper>
         </div>
@@ -13,13 +14,14 @@
             <img src="cloud://bertlearning-62870c.6265-bertlearning-62870c/images/music_icon.png" class="musicImg"/>
             <img src="cloud://bertlearning-62870c.6265-bertlearning-62870c/images/music_play.png" class="music_play playImg"/>
         </div>
+        <!-- 邀请函详情 -->
         <div class="info" :animation="animationData">
             <div class="content">
-                <h1>沈运 <span>❤</span> 李慧</h1>
-                <p>谨定于 2019年10月04日（星期五）晚上18:08</p>
-                <p>农历 九月初六 晚上六点零八分 举办婚礼</p>
-                <p>席设：宝应县宝胜苑宴会大厅</p>
-                <p>地址：江苏省扬州市宝应县苏中路1号</p>
+                <h1>宗介 <span>❤</span> 波妞</h1>
+                <p>谨定于 2020年05月20日（星期三）晚上18:08</p>
+                <p>农历 三月二十八 晚上六点零八分 举办婚礼</p>
+                <p>席设：向日葵之家</p>
+                <p>地址：永远寻不到的地方</p>
                 <img src="cloud://bertlearning-62870c.6265-bertlearning-62870c/images/we.png" class="img_footer"/>
             </div>
         </div>
@@ -43,11 +45,9 @@ export default {
   onShow () {
     const that = this
     that.isPlay = true
+    // 音乐
     audioCtx.src = 'cloud://bertlearning-62870c.6265-bertlearning-62870c/music/yudao.mp3'
     audioCtx.autoplay = true
-    // wx.showShareMenu({
-    //   withShareTicket: true
-    // })
   },
 
   methods: {
@@ -65,11 +65,12 @@ export default {
     }
   },
 
+  // 自定义转发内容
   onShareAppMessage: function (res) {
     return {
-      title: '嘿，有场仪式需要您的见证',
+      title: '自定义分享内容',
       path: '/pages/index/main',
-      imageUrl: 'https://img-blog.csdnimg.cn/20190804154125873.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JlcnRadW8=,size_16,color_FFFFFF,t_70'
+      imageUrl: 'https://img-blog.csdnimg.cn/20190918091410914.gif'
     }
   }
 }
