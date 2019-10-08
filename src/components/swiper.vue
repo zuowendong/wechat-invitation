@@ -8,59 +8,19 @@
         >
         <!-- 照片页列表 -->
             <swiper-item class="item">
-                <img mode="aspectFill" lazy-load="true" src="cloud://bertlearning-62870c.6265-bertlearning-62870c/photo/1.png" class="slide-image"/>
+                <img mode="aspectFill" lazy-load="true" src="../../static/photo/1.png" class="slide-image"/>
             </swiper-item>
 
             <swiper-item class="item">
-                <img mode="aspectFill" lazy-load="true" src="cloud://bertlearning-62870c.6265-bertlearning-62870c/photo/7.png" class="slide-image"/>
+                <img mode="aspectFill" lazy-load="true" src="../../static/photo/2.jpg" class="slide-image"/>
             </swiper-item>
 
             <swiper-item class="item">
-                <img mode="aspectFill" lazy-load="true" src="cloud://bertlearning-62870c.6265-bertlearning-62870c/photo/9.png" class="slide-image"/>
+                <img mode="aspectFill" lazy-load="true" src="../../static/photo/3.jpeg" class="slide-image"/>
             </swiper-item>
 
             <swiper-item class="item">
-                <img mode="aspectFill" lazy-load="true" src="cloud://bertlearning-62870c.6265-bertlearning-62870c/photo/10.png" class="slide-image"/>
-            </swiper-item>
-
-            <swiper-item class="item">
-                <img mode="aspectFill" lazy-load="true" src="cloud://bertlearning-62870c.6265-bertlearning-62870c/photo/11.png" class="slide-image"/>
-            </swiper-item>
-
-            <swiper-item class="item">
-                <img mode="aspectFill" lazy-load="true" src="cloud://bertlearning-62870c.6265-bertlearning-62870c/photo/14.png" class="slide-image"/>
-            </swiper-item>
-
-            <swiper-item class="item">
-                <img mode="aspectFill" lazy-load="true" src="cloud://bertlearning-62870c.6265-bertlearning-62870c/photo/17.png" class="slide-image"/>
-            </swiper-item>
-
-            <swiper-item class="item">
-                <img mode="aspectFill" lazy-load="true" src="cloud://bertlearning-62870c.6265-bertlearning-62870c/photo/21.png" class="slide-image"/>
-            </swiper-item>
-
-            <swiper-item class="item">
-                <img mode="aspectFill" lazy-load="true" src="cloud://bertlearning-62870c.6265-bertlearning-62870c/photo/23.png" class="slide-image"/>
-            </swiper-item>
-
-            <swiper-item class="item">
-                <img mode="aspectFill" lazy-load="true" src="cloud://bertlearning-62870c.6265-bertlearning-62870c/photo/25.png" class="slide-image"/>
-            </swiper-item>
-
-            <swiper-item class="item">
-                <img mode="aspectFill" lazy-load="true" src="cloud://bertlearning-62870c.6265-bertlearning-62870c/photo/29.png" class="slide-image"/>
-            </swiper-item>
-
-            <swiper-item class="item">
-                <img mode="aspectFill" lazy-load="true" src="cloud://bertlearning-62870c.6265-bertlearning-62870c/photo/31.png" class="slide-image"/>
-            </swiper-item>
-
-            <swiper-item class="item">
-                <img mode="aspectFill" lazy-load="true" src="cloud://bertlearning-62870c.6265-bertlearning-62870c/photo/36.png" class="slide-image"/>
-            </swiper-item>
-
-            <swiper-item class="item">
-                <img mode="aspectFill" lazy-load="true" src="cloud://bertlearning-62870c.6265-bertlearning-62870c/photo/4.png" class="slide-image"/>
+                <img mode="aspectFill" lazy-load="true" src="../../static/photo/4.jpg" class="slide-image"/>
             </swiper-item>
         </swiper>
     </div>
@@ -86,7 +46,4 @@ export default {
             display flex
             justify-content center
             align-items: center
-            .slide-image
-                min-height 100%
-                min-width 100%
 </style>

@@ -4,15 +4,15 @@
         <div class="bg-swiper">
             <index-swiper></index-swiper>
         </div>
-        <img class="inv" src="cloud://bertlearning-62870c.6265-bertlearning-62870c/images/inv.png"/>
+        <img class="inv" src="../../../static/images/inv.png"/>
         <!-- 背景音乐 -->
         <div class="bg_music" v-if="isPlay" @tap="audioPlay">
-            <img src="cloud://bertlearning-62870c.6265-bertlearning-62870c/images/music_icon.png" class="musicImg music_icon"/>
-            <img src="cloud://bertlearning-62870c.6265-bertlearning-62870c/images/music_play.png" class="music_play pauseImg"/>
+            <img src="../../../static/images/music_icon.png" class="musicImg music_icon"/>
+            <img src="../../../static/images/music_play.png" class="music_play pauseImg"/>
         </div>
         <div class="bg_music" v-else @tap="audioPlay">
-            <img src="cloud://bertlearning-62870c.6265-bertlearning-62870c/images/music_icon.png" class="musicImg"/>
-            <img src="cloud://bertlearning-62870c.6265-bertlearning-62870c/images/music_play.png" class="music_play playImg"/>
+            <img src="../../../static/images/music_icon.png" class="musicImg"/>
+            <img src="../../../static/images/music_play.png" class="music_play playImg"/>
         </div>
         <!-- 邀请函详情 -->
         <div class="info" :animation="animationData">
@@ -22,7 +22,7 @@
                 <p>农历 三月二十八 晚上六点零八分 举办婚礼</p>
                 <p>席设：向日葵之家</p>
                 <p>地址：永远寻不到的地方</p>
-                <img src="cloud://bertlearning-62870c.6265-bertlearning-62870c/images/we.png" class="img_footer"/>
+                <img src="../../../static/images/we.png" class="img_footer"/>
             </div>
         </div>
     </div>

@@ -8,7 +8,7 @@
         >
             <swiper-item class="item">
                 <!-- 首页照片 -->
-                <img mode="aspectFill" lazy-load="true" src="cloud://bertlearning-62870c.6265-bertlearning-62870c-1258833606/photo/38.png" class="slide-image"/>
+                <img mode="aspectFill" lazy-load="true" src="../../static/photo/5.jpg" class="slide-image"/>
             </swiper-item>
         </swiper>
     </div>

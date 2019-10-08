@@ -1,20 +1,20 @@
 <template>
     <div class="map">
-        <img mode="aspectFit" class="head-img" src="cloud://bertlearning-62870c.6265-bertlearning-62870c/images/t1.png"/>
+        <img mode="aspectFit" class="head-img" src="../../../static/images/t1.png"/>
         <!-- 地图中心点位置 -->
-        <map class="content" id="map" longitude="116.40" latitude="39.30" :markers="markers" scale="18" @tap="toNav">
+        <map class="content" id="map" longitude="121.29" latitude="31.14" :markers="markers" scale="18" @tap="toNav">
         </map>
         <div class="call">
             <div class="left" @tap="linkHe">
-                <img src="cloud://bertlearning-62870c.6265-bertlearning-62870c/images/he.png"/>
+                <img src="../../../static/images/he.png"/>
                 <span>呼叫新郎</span>
             </div>
             <div class="right" @tap="linkShe">
-                <img src="cloud://bertlearning-62870c.6265-bertlearning-62870c/images/she.png"/>
+                <img src="../../../static/images/she.png"/>
                 <span>呼叫新娘</span>
             </div>
         </div>
-        <img class="footer" src="cloud://bertlearning-62870c.6265-bertlearning-62870c/images/grren-flower-line.png"/>
+        <img class="footer" src="../../../static/images/grren-flower-line.png"/>
     </div>
 </template>
 
@@ -26,8 +26,8 @@ export default {
       markers: [{
         iconPath: '../../static/images/nav.png',
         id: 0,
-        longitude: 116.40,
-        latitude: 39.30,
+        longitude: 121.29,
+        latitude: 31.14,
         width: 50,
         height: 50
       }]
@@ -38,9 +38,9 @@ export default {
     // 地图中心位置经纬度及缩放设置
     toNav () {
       wx.openLocation({
-        latitude: 33.24654,
-        longitude: 119.317711,
-        scale: 18
+        latitude: 31.14,
+        longitude: 121.29,
+        scale: 6
       })
     },
 
