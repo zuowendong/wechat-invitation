@@ -1,129 +1,98 @@
-# hello-uniapp
+<p align="center">
+    <img alt="logo" src="https://uviewui.com/common/logo.png" width="120" height="120" style="margin-bottom: 10px;">
+</p>
+<h3 align="center" style="margin: 30px 0 30px;font-weight: bold;font-size:40px;">uView 2.0</h3>
+<h3 align="center">多平台快速开发的UI框架</h3>
 
-`uni-app`框架示例，一套代码，同时发行到iOS、Android、H5、小程序等多个平台，请使用手机在下方扫码快速体验`uni-app`的强大功能。[官方文档](https://uniapp.dcloud.net.cn/)
+[![stars](https://img.shields.io/github/stars/umicro/uView2.0?style=flat-square&logo=GitHub)](https://github.com/umicro/uView2.0)
+[![forks](https://img.shields.io/github/forks/umicro/uView2.0?style=flat-square&logo=GitHub)](https://github.com/umicro/uView2.0)
+[![issues](https://img.shields.io/github/issues/umicro/uView2.0?style=flat-square&logo=GitHub)](https://github.com/umicro/uView2.0/issues)
+[![Website](https://img.shields.io/badge/uView-up-blue?style=flat-square)](https://uviewui.com)
+[![release](https://img.shields.io/github/v/release/umicro/uView2.0?style=flat-square)](https://gitee.com/umicro/uView2.0/releases)
+[![license](https://img.shields.io/github/license/umicro/uView2.0?style=flat-square)](https://en.wikipedia.org/wiki/MIT_License)
+
+## 说明
+
+uView UI，是[uni-app](https://uniapp.dcloud.io/)全面兼容nvue的uni-app生态框架，全面的组件和便捷的工具会让您信手拈来，如鱼得水
+
+## [官方文档：https://uviewui.com](https://uviewui.com)
+
+### 官方1群：1042987248（已满）
+### 官方2群：249718512（已满）
+### 官方3群：1129077272（已满）
+### 官方4群：1084514613（已满）
+### 官方5群：863820668（已满）
+### 官方6群：745721078（已满）
+### 官方7群：627867855（已满）
+### 官方8群：496409492（已满）
+### 官方9群：828504448（已满）
+### 官方10群：232041042（已满）
+### 官方11群：364463526（已满）
+### 官方12群：229707069（已满）
+### [点击加13群交流反馈：879811455](https://jq.qq.com/?_wv=1027&k=vz4By4k5)
+
+## 特性
+
+- 全面兼容nvue，原生渲染，高性能
+- 兼容安卓，iOS，微信小程序，H5，QQ小程序，百度小程序，支付宝小程序，头条小程序
+- 60+精选组件，功能丰富，多端兼容，让您快速集成，开箱即用
+- 众多贴心的JS利器，让您飞镖在手，召之即来，百步穿杨
+- 众多的常用页面和布局，让您专注逻辑，事半功倍
+- 详尽的文档支持，现代化的演示效果
+- 按需引入，精简打包体积
+
+
+## 预览
+
+您可以通过**微信**扫码，查看最佳的演示效果。
+<br>
+<br>
+<img src="https://uviewui.com/common/weixin_mini_qrcode.png" width="220" height="220" >
+
+
+## 链接
+
+- [官方文档](https://www.uviewui.com/)
+- [更新日志](https://www.uviewui.com/components/changelog.html)
+- [升级指南](https://www.uviewui.com/components/changeGuide.html)
+- [关于我们](https://www.uviewui.com/cooperation/about.html)
+
+## 交流反馈
+
+欢迎加入我们的QQ群交流反馈：[点此跳转](https://www.uviewui.com/components/addQQGroup.html)
+
+## 关于PR
+
+> 我们非常乐意接受各位的优质PR，但在此之前我希望您了解uView2.0是一个需要兼容多个平台的（小程序、h5、ios app、android app）包括nvue页面、vue页面。
+> 所以希望在您修复bug并提交之前尽可能的去这些平台测试一下兼容性。最好能携带测试截图以方便审核。非常感谢！
+
+## 安装
+
+#### **uni-app插件市场链接** —— [https://ext.dcloud.net.cn/plugin?id=1593](https://ext.dcloud.net.cn/plugin?id=1593)
+
+请通过[官网安装文档](https://www.uviewui.com/components/install.html)了解更详细的内容
 
 ## 快速上手
-hello-uniapp 示例工程可以通过两种方式创建， 一种是 HBuilderX, 配套 IDE，集成开发；另一种是 CLI 创建；推荐前者。
-### 通过 HBuilderX 可视化界面创建（推荐）
 
-可视化的方式比较简单，HBuilderX内置相关环境，开箱即用，无需配置nodejs。
+请通过[快速上手](https://uviewui.com/components/quickstart.html)了解更详细的内容
 
-开始之前，开发者需先下载安装如下工具：
+## 使用方法
+配置easycom规则后，自动按需引入，无需`import`组件，直接引用即可。
 
-- HBuilderX：[官方IDE下载地址](https://www.dcloud.io/hbuilderx.html)
-
-HBuilderX是通用的前端开发工具，但为`uni-app`做了特别强化，请下载App开发版。
-
-由于截图在 github 不便浏览，参见官方文档 [HBuilderX 可视化界面创建](https://uniapp.dcloud.net.cn/quickstart?id=_1-%e9%80%9a%e8%bf%87-hbuilderx-%e5%8f%af%e8%a7%86%e5%8c%96%e7%95%8c%e9%9d%a2)
-
-### 通过 vue-cli 创建
-
-```
-npm install -g @vue/cli
+```html
+<template>
+	<u-button text="按钮"></u-button>
+</template>
 ```
 
-#### 创建uni-app
 
-**使用正式版**（对应HBuilderX最新正式版）
+## 捐赠uView的研发
 
-```
-vue create -p dcloudio/uni-preset-vue my-project
-```
+uView文档内容和框架源码全部开源免费，如果您认为uView帮到了您的开发工作，您可以捐赠uView的研发工作，捐赠无门槛，哪怕是一杯可乐也好(相信这比打赏主播更有意义)。
 
-**使用alpha版**（对应HBuilderX最新alpha版）
+<img src="https://uviewui.com/common/wechat.png" width="220" >
+<img style="margin-left: 100px;" src="https://uviewui.com/common/alipay.png" width="220" >
 
-```
-vue create -p dcloudio/uni-preset-vue#alpha my-alpha-project
-```
-
-此时，会提示选择项目模板，选择 `hello uni-app` 项目模板，如下所示：
-
-<div>
-<img src="https://img.cdn.aliyun.dcloud.net.cn/guide/uniapp/h5-cli-01.png" width="300">
-</div>
-
-创建好后，进入项目目录
-```
-cd my-project
-```
-
-执行该命令运行到 h5 端
-```
-npm run dev:h5
-```
-
-欢迎提 issues，推荐到[官方社区](https://ask.dcloud.net.cn/explore/)提问。
-
-## 扫码体验
-
-<div class="quick">
-    <p>一套代码编到10个平台，这不是梦想。眼见为实，扫描10个二维码，亲自体验最全面的跨平台效果！</p>
-    <div style="display: flex;">
-      <a href="//m3w.cn/uniapp" target="_blank" class="clear-style barcode-view">
-        <div class="barcode-img-box">
-          <img src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-dc-site/ba7d0750-517d-11eb-bdc1-8bd33eb6adaa.png" width="160" />
-        </div>
-        <b>Android版</b>
-      </a>
-      <a href="https://itunes.apple.com/cn/app/hello-uni-app/id1417078253?mt=8" target="_blank" class="clear-style barcode-view">
-        <div class="barcode-img-box">
-          <img src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-dc-site/bb3ef7c0-517d-11eb-bdc1-8bd33eb6adaa.png" width="160" />
-        </div>
-        <b>iOS版</b>
-      </a>
-      <a href="https://hellouniapp.dcloud.net.cn/" target="_blank" class="clear-style barcode-view">
-        <div class="barcode-img-box">
-          <img src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-dc-site/bb3ef7c0-517d-11eb-bdc1-8bd33eb6adaa.png" width="160" />
-        </div>
-        <b>H5版</b>
-      </a>
-      <a href="//m3w.cn/uniapp" target="_blank" class="clear-style barcode-view">
-        <div class="barcode-img-box"><img src="//img.cdn.aliyun.dcloud.net.cn/guide/uniapp/gh_33446d7f7a26_430.jpg" width="160" /></div>
-        <b>微信小程序版</b>
-      </a>
-      <a href="//m3w.cn/uniapp" target="_blank" class="clear-style barcode-view">
-        <div class="barcode-img-box"><img src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-dc-site/b131e0d0-517d-11eb-a16f-5b3e54966275.png" width="160" /></div>
-        <b>支付宝小程序版</b>
-      </a>
-    </div>
-    <div class="flex-img-group-view" style="margin-top: 20px;">
-      <a href="//m3w.cn/uniapp" target="_blank" class="clear-style barcode-view">
-        <div class="barcode-img-box"><img src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-dc-site/b204e840-517d-11eb-8ff1-d5dcf8779628.png" width="160" /></div>
-        <b>百度小程序版</b>
-      </a>
-      <a href="//m3w.cn/uniapp" target="_blank" class="clear-style barcode-view">
-        <div class="barcode-img-box">
-          <img src="https://img.cdn.aliyun.dcloud.net.cn/guide/uniapp/mp-toutiao.png" width="160" />
-        </div>
-        <b>字节跳动小程序版</b>
-      </a>
-      <a href="//m3w.cn/uniapp" target="_blank" class="clear-style barcode-view">
-        <div class="barcode-img-box">
-          <img src="https://img.cdn.aliyun.dcloud.net.cn/guide/uniapp/hello-uni-qq.png" width="160" />
-        </div>
-        <b>QQ小程序版</b>
-      </a>
-      <a href="//m3w.cn/uniapp" target="_blank" class="clear-style barcode-view">
-        <div class="barcode-img-box">
-          <img src="https://img.cdn.aliyun.dcloud.net.cn/guide/uniapp/hello-uni-qa-union.png" width="160" />
-        </div>
-        <b>快应用</b>
-      </a>
-      <a href="https://so.mp.360.cn/mp.html?appid=qh4j181qqtru354st6" target="_blank" class="clear-style barcode-view">
-        <div class="barcode-img-box">
-          <img src="https://img.cdn.aliyun.dcloud.net.cn/guide/uniapp/hello-uni-mp-360-qr.png" width="160" />
-        </div>
-        <b>360小程序</b>
-      </a>
-    </div>
-    <p>
-        <em>注：某些平台不能提交简单demo，故补充了一些其他功能；hello uni-app示例代码可从[github](https://github.com/dcloudio/hello-uniapp)获取</em></br>
-        <em>快应用仅支持 vivo 、oppo、华为</em></br>
-        <em>360小程序仅 windows平台支持，需要在360浏览器中打开</em></br>
-    </p>
-</div>
-
-`uni-app`官网文档详见[https://uniapp.dcloud.io](https://uniapp.dcloud.io)
-
-更多uni-app的模板、示例详见[插件市场](https://ext.dcloud.net.cn/)
+## 版权信息
+uView遵循[MIT](https://en.wikipedia.org/wiki/MIT_License)开源协议，意味着您无需支付任何费用，也无需授权，即可将uView应用到您的产品中。
 
