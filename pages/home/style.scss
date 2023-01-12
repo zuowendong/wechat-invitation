@@ -1,0 +1,26 @@
+.main {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.infoWrapper {
+	width: 100%;
+	position: absolute;
+	bottom: 20%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	.text1 {
+		font-size: 40rpx;
+		font-weight: bold;
+		padding-bottom: 20rpx;
+	}
+	.text2 {
+		font-size: 32rpx;
+		padding: 6rpx 0;
+	}
+	.text3 {
+		font-size: 26rpx;
+		margin-top: 20rpx;
+	}
+}
