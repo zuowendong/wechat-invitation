@@ -4,12 +4,20 @@
 	position: relative;
 }
 .infoWrapper {
-	width: 100%;
+	width: calc(100% - 60rpx);
 	position: absolute;
-	bottom: 20%;
+	bottom: 9%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	z-index: 10;
+	padding: 20rpx 0;
+	box-sizing: border-box;
+	margin: 0 30rpx;
+	// background-color: #540208;
+	border-radius: 6px;
+	// color: #fff;
+	box-shadow: 1rpx 3rp 5rpx #333;
 	.text1 {
 		font-size: 40rpx;
 		font-weight: bold;

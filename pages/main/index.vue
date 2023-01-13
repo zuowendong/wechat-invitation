@@ -4,7 +4,6 @@
 			<HomeView v-if="currentTab === 'home'" />
 			<AddressView v-if="currentTab === 'address'" />
 			<MessageView v-if="currentTab === 'message'" />
-			<MineView v-if="currentTab === 'mine'" />
 		</view>
 		<u-tabbar
 			:value="currentTab"
@@ -28,10 +27,6 @@
 				<image class="tabIcon" slot="active-icon" src="../../static/assets/images/message_active.png"></image>
 				<image class="tabIcon" slot="inactive-icon" src="../../static/assets/images/message.png"></image>
 			</u-tabbar-item>
-			<u-tabbar-item name="mine" text="我的">
-				<image class="tabIcon" slot="active-icon" src="../../static/assets/images/mine_active.png"></image>
-				<image class="tabIcon" slot="inactive-icon" src="../../static/assets/images/mine.png"></image>
-			</u-tabbar-item>
 		</u-tabbar>
 	</view>
 </template>
@@ -40,7 +35,6 @@
 import HomeView from "../home/index.vue";
 import AddressView from "../address/index.vue";
 import MessageView from "../message/index.vue";
-import MineView from "../mine/index.vue";
 
 export default {
 	name: "MainView",
@@ -48,7 +42,6 @@ export default {
 		HomeView,
 		AddressView,
 		MessageView,
-		MineView,
 	},
 	data() {
 		return {
@@ -56,7 +49,24 @@ export default {
 		};
 	},
 	async mounted() {},
-	methods: {},
+	created() {
+		this.playAudio();
+	},
+	methods: {
+		playAudio() {
+			const innerAudioContext = uni.createInnerAudioContext();
+			innerAudioContext.autoplay = true;
+			innerAudioContext.loop = true;
+			innerAudioContext.src = "http://47.106.9.107/static/blindfaith.mp3";
+			innerAudioContext.onPlay(() => {
+				console.log("开始播放");
+			});
+			innerAudioContext.onError((res) => {
+				console.log(res.errMsg);
+				console.log(res.errCode);
+			});
+		},
+	},
 };
 </script>
 
